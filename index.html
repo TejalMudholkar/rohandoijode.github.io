@@ -12,19 +12,14 @@
             font-family: 'Press Start 2P', cursive;
             background-color: #121212;
             color: #ffffff;
-        }
-
-        .container {
-            padding: 20px;
-            max-width: 1000px;
-            margin: 0 auto;
+            background-image: url('mario-minus-world-background.jpg'); /* Add your background image here */
+            background-size: cover;
         }
 
         header {
             text-align: center;
             padding: 20px;
             background: #141e30;
-            /* Dark Blue */
             color: #e0e0e0;
         }
 
@@ -32,9 +27,7 @@
             margin: 0;
             font-size: 2.5em;
             color: #00ffab;
-            /* Neon Green */
             text-shadow: 0 0 8px #00ffab;
-            /* Adjusted for better clarity */
             animation: neon-glow 1.5s infinite alternate, blink 1s infinite;
         }
 
@@ -47,12 +40,10 @@
             text-decoration: none;
             color: #e0e0e0;
             transition: color 0.3s;
-            /* Remove underline */
         }
 
         header nav a:hover {
             color: #f040ff;
-            /* Neon Purple */
             text-shadow: 0 0 5px #f040ff;
         }
 
@@ -64,7 +55,6 @@
             font-size: 2em;
             margin-bottom: 20px;
             color: #ff2e63;
-            /* Neon Red */
             text-shadow: 0 0 10px #ff2e63;
             animation: neon-glow 3s infinite alternate, blink 1s infinite;
         }
@@ -87,7 +77,6 @@
         .blog-entry h3 {
             font-size: 1.5em;
             color: #00adb5;
-            /* Neon Cyan */
             text-shadow: 0 0 10px #00adb5;
             animation: neon-glow 1.5s infinite alternate;
         }
@@ -96,21 +85,10 @@
             margin-top: 10px;
         }
 
-        .blog-entry a {
-            text-decoration: none; /* Remove underline from links */
-            color: #00adb5; /* Link color */
-        }
-
-        .blog-entry a:hover {
-            color: #ff2e63; /* Adjust color on hover */
-            text-shadow: 0 0 5px #ff2e63; /* Optional: Add a glow effect on hover */
-        }
-
         footer {
             text-align: center;
             padding: 20px;
             background: #141e30;
-            /* Dark Blue */
             color: #e0e0e0;
             margin-top: 40px;
         }
@@ -137,7 +115,6 @@
             color: #ff2e63;
         }
 
-        /* Neon Glow Animation */
         @keyframes neon-glow {
             from {
                 text-shadow: 0 0 10px, 0 0 20px, 0 0 30px, 0 0 40px, 0 0 50px, 0 0 60px, 0 0 70px;
@@ -148,7 +125,6 @@
             }
         }
 
-        /* Blinking Animation */
         @keyframes blink {
             0% {
                 opacity: 1;
@@ -163,13 +139,10 @@
             }
         }
 
-        /* Responsive Design */
         @media (max-width: 600px) {
             header h1 {
                 font-size: 2em;
-                /* Slightly smaller font size for better mobile readability */
                 text-shadow: 0 0 6px #00ffab;
-                /* Adjusted shadow for smaller screens */
             }
 
             .section-title {
@@ -200,7 +173,7 @@
             <div class="content">
                 <div class="job-bio">
                     <h3>Data Engineer at Roche</h3>
-                    <p>Hello! I'm Rohan Doijode, a passionate Data Evangelist specializing in building robust data pipelines
+                    <p>Hello ! I'm Rohan Doijode, a passionate Data Evangelist specializing in building robust data pipelines
                         and scalable analytics solutions. I love working with data and turning complex datasets into
                         actionable insights.</p>
                 </div>
@@ -231,7 +204,8 @@
 
                 <div class="blog-entry">
                     <h3>Photography</h3>
-                    <p>Photography is my way of expressing creativity. Check out some of my favorite shots on <a href="https://github.com/rohandoijode/photography" target="_blank">GitHub</a>.</p>
+                    <p>Photography is my way of expressing creativity. Check out some of my favorite shots on <a
+                            href="https://github.com/rohandoijode/photography" target="_blank">GitHub</a>.</p>
                 </div>
             </div>
         </section>
@@ -256,6 +230,17 @@
             <a href="https://www.instagram.com/rohandoijode" target="_blank">Instagram</a>
         </div>
     </footer>
+
+    <!-- Jump Sound Effect -->
+    <audio id="jump-sound" src="https://freesound.org/data/previews/315/315013_4787803-lq.mp3"></audio>
+
+    <script>
+        // Play jump sound on every click
+        document.addEventListener('click', function() {
+            var jumpSound = document.getElementById('jump-sound');
+            jumpSound.play();
+        });
+    </script>
 </body>
 
 </html>
