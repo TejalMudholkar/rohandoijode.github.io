@@ -7,176 +7,13 @@
     <title>Rohan Doijode's Personal Website</title>
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
     <style>
-        body {
-            margin: 0;
-            font-family: 'Press Start 2P', cursive;
-            background-color: #121212;
-            color: #ffffff;
-        }
-
-        .container {
-            padding: 20px;
-            max-width: 1000px;
-            margin: 0 auto;
-        }
-
-        header {
-            text-align: center;
-            padding: 20px;
-            background: #141e30;
-            /* Dark Blue */
-            color: #e0e0e0;
-        }
-
-        header h1 {
-            margin: 0;
-            font-size: 2.5em;
-            color: #00ffab;
-            /* Neon Green */
-            text-shadow: 0 0 8px #00ffab;
-            /* Adjusted for better clarity */
-            animation: neon-glow 1.5s infinite alternate, blink 1s infinite;
-        }
-
-        header nav {
-            margin-top: 10px;
-        }
-
-        header nav a {
-            margin: 0 15px;
-            text-decoration: none;
-            color: #e0e0e0;
-            transition: color 0.3s;
-            /* Remove underline */
-            text-decoration: none;
-        }
-
-        header nav a:hover {
-            color: #f040ff;
-            /* Neon Purple */
-            text-shadow: 0 0 5px #f040ff;
-        }
-
-        section {
-            margin-top: 40px;
-        }
-
-        .section-title {
-            font-size: 2em;
-            margin-bottom: 20px;
-            color: #ff2e63;
-            /* Neon Red */
-            text-shadow: 0 0 10px #ff2e63;
-            animation: neon-glow 1.5s infinite alternate, blink 1s infinite;
-        }
-
-        .content {
-            background-color: #212121;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-        }
-
-        .content p {
-            line-height: 1.6;
-        }
-
-        .blog-entry {
-            margin-bottom: 30px;
-        }
-
-        .blog-entry h3 {
-            font-size: 1.5em;
-            color: #00adb5;
-            /* Neon Cyan */
-            text-shadow: 0 0 10px #00adb5;
-            animation: neon-glow 1.5s infinite alternate;
-        }
-
-        .blog-entry p {
-            margin-top: 10px;
-        }
-
-        footer {
-            text-align: center;
-            padding: 20px;
-            background: #141e30;
-            /* Dark Blue */
-            color: #e0e0e0;
-            margin-top: 40px;
-        }
-
-        footer p {
-            font-size: 1em;
-            animation: blink 1s infinite;
-        }
-
-        footer a {
-            color: #00adb5;
-            text-decoration: none;
-            font-size: 1.2em;
-            animation: blink 1s infinite;
-        }
-
-        .social-media a {
-            text-decoration: none;
-            color: #00adb5;
-            font-size: 1.2em;
-        }
-
-        .social-media a:hover {
-            color: #ff2e63;
-        }
-
-        /* Neon Glow Animation */
-        @keyframes neon-glow {
-            from {
-                text-shadow: 0 0 10px, 0 0 20px, 0 0 30px, 0 0 40px, 0 0 50px, 0 0 60px, 0 0 70px;
-            }
-
-            to {
-                text-shadow: 0 0 20px, 0 0 30px, 0 0 40px, 0 0 50px, 0 0 60px, 0 0 70px, 0 0 80px;
-            }
-        }
-
-        /* Blinking Animation */
-        @keyframes blink {
-            0% {
-                opacity: 1;
-            }
-
-            50% {
-                opacity: 0;
-            }
-
-            100% {
-                opacity: 1;
-            }
-        }
-
-        /* Responsive Design */
-        @media (max-width: 600px) {
-            header h1 {
-                font-size: 2em;
-                /* Slightly smaller font size for better mobile readability */
-                text-shadow: 0 0 6px #00ffab;
-                /* Adjusted shadow for smaller screens */
-            }
-
-            .section-title {
-                font-size: 1.5em;
-            }
-
-            .blog-entry h3 {
-                font-size: 1.2em;
-            }
-        }
+        /* Include the CSS here */
     </style>
 </head>
 
 <body>
     <header>
-        <h1>Rohan's Corner</h1>
+        <h1>Rohan Doijode's Corner</h1>
         <nav>
             <a href="#work">Work</a>
             <a href="#leisure">Leisure</a>
@@ -191,7 +28,7 @@
             <div class="section-title">Work</div>
             <div class="content">
                 <div class="job-bio">
-                    <h3>Data Engineer at Roche</h3>
+                    <h3>Data Engineer at XYZ Corp</h3>
                     <p>Hello! I'm Rohan Doijode, a passionate Data Evangelist specializing in building robust data pipelines
                         and scalable analytics solutions. I love working with data and turning complex datasets into
                         actionable insights.</p>
@@ -271,6 +108,9 @@
         <section id="visitors">
             <div class="section-title">Visitor Statistics</div>
             <div class="content">
+                <div id="visitor-map" style="width: 100%; height: 400px;">
+                    <!-- Map will be rendered here -->
+                </div>
                 <p>Current visit count: <span id="visit-count">0</span></p>
                 <p>Visitors from:</p>
                 <ul id="visitor-locations">
@@ -297,18 +137,4 @@
             visitCount++;
             document.getElementById('visit-count').innerText = visitCount;
 
-            const visitorLocations = document.getElementById('visitor-locations');
-            visitorLocations.innerHTML = '';
-
-            locations.forEach(location => {
-                const li = document.createElement('li');
-                li.textContent = location;
-                visitorLocations.appendChild(li);
-            });
-        }
-
-        updateVisitorStats();
-    </script>
-</body>
-
-</html>
+            const visitorLocations = document.getElementById('visitor-locations
