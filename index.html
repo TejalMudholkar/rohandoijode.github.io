@@ -7,13 +7,176 @@
     <title>Rohan Doijode's Personal Website</title>
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
     <style>
-        /* Include the CSS here */
+        body {
+            margin: 0;
+            font-family: 'Press Start 2P', cursive;
+            background-color: #121212;
+            color: #ffffff;
+        }
+
+        .container {
+            padding: 20px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            padding: 20px;
+            background: #141e30;
+            /* Dark Blue */
+            color: #e0e0e0;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+            color: #00ffab;
+            /* Neon Green */
+            text-shadow: 0 0 8px #00ffab;
+            /* Adjusted for better clarity */
+            animation: neon-glow 1.5s infinite alternate, blink 1s infinite;
+        }
+
+        header nav {
+            margin-top: 10px;
+        }
+
+        header nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #e0e0e0;
+            transition: color 0.3s;
+            /* Remove underline */
+            text-decoration: none;
+        }
+
+        header nav a:hover {
+            color: #f040ff;
+            /* Neon Purple */
+            text-shadow: 0 0 5px #f040ff;
+        }
+
+        section {
+            margin-top: 40px;
+        }
+
+        .section-title {
+            font-size: 2em;
+            margin-bottom: 20px;
+            color: #ff2e63;
+            /* Neon Red */
+            text-shadow: 0 0 10px #ff2e63;
+            animation: neon-glow 3s infinite alternate, blink 1s infinite;
+        }
+
+        .content {
+            background-color: #212121;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+        }
+
+        .content p {
+            line-height: 1.6;
+        }
+
+        .blog-entry {
+            margin-bottom: 30px;
+        }
+
+        .blog-entry h3 {
+            font-size: 1.5em;
+            color: #00adb5;
+            /* Neon Cyan */
+            text-shadow: 0 0 10px #00adb5;
+            animation: neon-glow 1.5s infinite alternate;
+        }
+
+        .blog-entry p {
+            margin-top: 10px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #141e30;
+            /* Dark Blue */
+            color: #e0e0e0;
+            margin-top: 40px;
+        }
+
+        footer p {
+            font-size: 1em;
+            animation: blink 1s infinite;
+        }
+
+        footer a {
+            color: #00adb5;
+            text-decoration: none;
+            font-size: 1.2em;
+            animation: blink 1s infinite;
+        }
+
+        .social-media a {
+            text-decoration: none;
+            color: #00adb5;
+            font-size: 1.2em;
+        }
+
+        .social-media a:hover {
+            color: #ff2e63;
+        }
+
+        /* Neon Glow Animation */
+        @keyframes neon-glow {
+            from {
+                text-shadow: 0 0 10px, 0 0 20px, 0 0 30px, 0 0 40px, 0 0 50px, 0 0 60px, 0 0 70px;
+            }
+
+            to {
+                text-shadow: 0 0 20px, 0 0 30px, 0 0 40px, 0 0 50px, 0 0 60px, 0 0 70px, 0 0 80px;
+            }
+        }
+
+        /* Blinking Animation */
+        @keyframes blink {
+            0% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 2em;
+                /* Slightly smaller font size for better mobile readability */
+                text-shadow: 0 0 6px #00ffab;
+                /* Adjusted shadow for smaller screens */
+            }
+
+            .section-title {
+                font-size: 1.5em;
+            }
+
+            .blog-entry h3 {
+                font-size: 1.2em;
+            }
+        }
     </style>
 </head>
 
 <body>
     <header>
-        <h1>Rohan Doijode's Corner</h1>
+        <h1>Rohan's Corner</h1>
         <nav>
             <a href="#work">Work</a>
             <a href="#leisure">Leisure</a>
@@ -28,7 +191,7 @@
             <div class="section-title">Work</div>
             <div class="content">
                 <div class="job-bio">
-                    <h3>Data Engineer at XYZ Corp</h3>
+                    <h3>Data Engineer at Roche</h3>
                     <p>Hello! I'm Rohan Doijode, a passionate Data Evangelist specializing in building robust data pipelines
                         and scalable analytics solutions. I love working with data and turning complex datasets into
                         actionable insights.</p>
@@ -36,15 +199,12 @@
 
                 <div class="blog-entry">
                     <h3>Technical Blogs</h3>
-                    <p>Check out my latest technical blogs on Data Engineering, big data technologies, and cloud solutions:
-                    </p>
+                    <p>Check out my latest technical blogs on Data Engineering, big data technologies, and cloud solutions:</p>
                     <ul>
-                        <li><a href="https://medium.com/@rohandoijode/my-tech-blog-1" target="_blank">Understanding Apache
-                                Kafka: A Comprehensive Guide</a></li>
-                        <li><a href="https://medium.com/@rohandoijode/my-tech-blog-2" target="_blank">Building Scalable
-                                Data Pipelines with Apache Spark</a></li>
-                        <li><a href="https://medium.com/@rohandoijode/my-tech-blog-3" target="_blank">Data Modeling Best
-                                Practices for Big Data</a></li>
+                        <li><a href="https://medium.com/@rohandoijode/understanding-apache-kafka-a-comprehensive-guide" target="_blank">Understanding Apache Kafka: A Comprehensive Guide</a></li>
+                        <li><a href="https://medium.com/@rohandoijode/building-scalable-data-pipelines-with-apache-spark" target="_blank">Building Scalable Data Pipelines with Apache Spark</a></li>
+                        <li><a href="https://medium.com/@rohandoijode/data-modeling-best-practices-for-big-data" target="_blank">Data Modeling Best Practices for Big Data</a></li>
+                        <li><a href="https://medium.com/@rdoijode/healthcare-in-the-age-of-general-ai-5e2a11b43ed1" target="_blank">Healthcare in the Age of General AI</a></li>
                     </ul>
                 </div>
             </div>
@@ -58,12 +218,9 @@
                     <h3>Travel Blog</h3>
                     <p>I love exploring new places and capturing beautiful moments. Here are some of my travel blogs:</p>
                     <ul>
-                        <li><a href="https://medium.com/@rohandoijode/my-travel-blog-1" target="_blank">Adventures in the
-                                Alps</a></li>
-                        <li><a href="https://medium.com/@rohandoijode/my-travel-blog-2" target="_blank">Exploring the
-                                Streets of Tokyo</a></li>
-                        <li><a href="https://medium.com/@rohandoijode/my-travel-blog-3" target="_blank">A Journey Through
-                                the Sahara Desert</a></li>
+                        <li><a href="https://medium.com/@rohandoijode/adventures-in-the-alps" target="_blank">Adventures in the Alps</a></li>
+                        <li><a href="https://medium.com/@rohandoijode/exploring-the-streets-of-tokyo" target="_blank">Exploring the Streets of Tokyo</a></li>
+                        <li><a href="https://medium.com/@rohandoijode/a-journey-through-the-sahara-desert" target="_blank">A Journey Through the Sahara Desert</a></li>
                     </ul>
                 </div>
 
@@ -86,7 +243,7 @@
                     <div>
                         <!-- SoundCloud Audio -->
                         <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay"
-                            src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/users/rohan-doijode&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
+                            src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/12345678&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
                     </div>
                 </div>
             </div>
@@ -108,9 +265,6 @@
         <section id="visitors">
             <div class="section-title">Visitor Statistics</div>
             <div class="content">
-                <div id="visitor-map" style="width: 100%; height: 400px;">
-                    <!-- Map will be rendered here -->
-                </div>
                 <p>Current visit count: <span id="visit-count">0</span></p>
                 <p>Visitors from:</p>
                 <ul id="visitor-locations">
