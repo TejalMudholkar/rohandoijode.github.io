@@ -48,7 +48,6 @@
             color: #e0e0e0;
             transition: color 0.3s;
             /* Remove underline */
-            text-decoration: none;
         }
 
         header nav a:hover {
@@ -95,6 +94,16 @@
 
         .blog-entry p {
             margin-top: 10px;
+        }
+
+        .blog-entry a {
+            text-decoration: none; /* Remove underline from links */
+            color: #00adb5; /* Link color */
+        }
+
+        .blog-entry a:hover {
+            color: #ff2e63; /* Adjust color on hover */
+            text-shadow: 0 0 5px #ff2e63; /* Optional: Add a glow effect on hover */
         }
 
         footer {
@@ -191,18 +200,16 @@
             <div class="content">
                 <div class="job-bio">
                     <h3>Data Engineer at Roche</h3>
-                    <p>Hello ! I'm Rohan Doijode, a passionate Data Evangelist specializing in building robust data pipelines
+                    <p>Hello! I'm Rohan Doijode, a passionate Data Evangelist specializing in building robust data pipelines
                         and scalable analytics solutions. I love working with data and turning complex datasets into
                         actionable insights.</p>
                 </div>
 
                 <div class="blog-entry">
                     <h3>Technical Blogs</h3>
-                    <p>Check out my latest technical blogs on Data Engineering, big data technologies, and cloud solutions:
-                    </p>
+                    <p>Check out my latest technical blogs on Data Engineering, big data technologies, and cloud solutions:</p>
                     <ul>
                         <li><a href="https://medium.com/@rdoijode/healthcare-in-the-age-of-general-ai-5e2a11b43ed1" target="_blank">Healthcare in Age of Gen AI</a></li>
-
                     </ul>
                 </div>
             </div>
@@ -216,19 +223,15 @@
                     <h3>Travel Blog</h3>
                     <p>I love exploring new places and capturing beautiful moments. Here are some of my travel blogs:</p>
                     <ul>
-                        <li><a href="https://medium.com/@rohandoijode/my-travel-blog-1" target="_blank">Adventures in the
-                                Alps</a></li>
-                        <li><a href="https://medium.com/@rohandoijode/my-travel-blog-2" target="_blank">Exploring the
-                                Streets of Tokyo</a></li>
-                        <li><a href="https://medium.com/@rohandoijode/my-travel-blog-3" target="_blank">A Journey Through
-                                the Sahara Desert</a></li>
+                        <li><a href="https://medium.com/@rohandoijode/my-travel-blog-1" target="_blank">Adventures in the Alps</a></li>
+                        <li><a href="https://medium.com/@rohandoijode/my-travel-blog-2" target="_blank">Exploring the Streets of Tokyo</a></li>
+                        <li><a href="https://medium.com/@rohandoijode/my-travel-blog-3" target="_blank">A Journey Through the Sahara Desert</a></li>
                     </ul>
                 </div>
 
                 <div class="blog-entry">
                     <h3>Photography</h3>
-                    <p>Photography is my way of expressing creativity. Check out some of my favorite shots on <a
-                            href="https://github.com/rohandoijode/photography" target="_blank">GitHub</a>.</p>
+                    <p>Photography is my way of expressing creativity. Check out some of my favorite shots on <a href="https://github.com/rohandoijode/photography" target="_blank">GitHub</a>.</p>
                 </div>
             </div>
         </section>
