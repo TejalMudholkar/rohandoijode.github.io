@@ -4,29 +4,54 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rohan Doijode - Data Engineer & Photographer</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700|Roboto:300,400" rel="stylesheet">
     <style>
         body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
+            font-family: 'Roboto', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
+            background-color: #f0f0f0;
+            color: #333;
         }
 
         header {
-            background-color: #333;
+            background-color: #1a1a1a;
             color: #fff;
-            padding: 1rem 0;
+            padding: 20px 0;
             text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        header::after {
+            content: '';
+            background: url('https://via.placeholder.com/1500x500') no-repeat center center/cover;
+            opacity: 0.2;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
         }
 
         header h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 3rem;
             margin: 0;
-            font-size: 2.5rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            margin-top: 10px;
+            position: relative;
+            z-index: 1;
         }
 
         nav {
-            background-color: #444;
+            background-color: #333;
             overflow: hidden;
         }
 
@@ -35,10 +60,11 @@
             padding: 0;
             margin: 0;
             text-align: center;
+            display: flex;
+            justify-content: center;
         }
 
         nav ul li {
-            display: inline;
             margin: 0 15px;
         }
 
@@ -48,6 +74,7 @@
             font-weight: bold;
             padding: 14px 20px;
             display: inline-block;
+            transition: background-color 0.3s ease;
         }
 
         nav ul li a:hover {
@@ -63,35 +90,127 @@
         }
 
         section {
-            margin-bottom: 2rem;
+            margin-bottom: 3rem;
+            padding: 2rem;
+            border-bottom: 2px solid #eee;
+        }
+
+        section h2 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            position: relative;
+        }
+
+        section h2::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 4px;
+            background-color: #1a1a1a;
+            margin-top: 8px;
+        }
+
+        .about {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .about img {
+            width: 45%;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin: 0 1rem;
+        }
+
+        .about p {
+            width: 50%;
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin: 0 1rem;
+        }
+
+        .portfolio {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
         }
 
         .portfolio img {
-            width: 100%;
+            width: calc(33% - 20px);
             height: auto;
-            margin-bottom: 1rem;
+            border-radius: 8px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
-        footer {
-            background-color: #333;
-            color: #fff;
+        .portfolio img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .contact {
             text-align: center;
-            padding: 1rem 0;
+        }
+
+        .contact-info {
+            margin-top: 20px;
+            font-size: 1.1rem;
         }
 
         .contact-info a {
-            color: #fff;
+            color: #1a1a1a;
             text-decoration: none;
+            border-bottom: 1px dashed #1a1a1a;
+            transition: color 0.3s ease, border-bottom-color 0.3s ease;
+        }
+
+        .contact-info a:hover {
+            color: #555;
+            border-bottom-color: #555;
+        }
+
+        .social-links {
+            margin-top: 20px;
         }
 
         .social-links a {
-            color: #fff;
+            color: #1a1a1a;
             margin: 0 10px;
             text-decoration: none;
+            font-size: 1.5rem;
+            transition: color 0.3s ease;
         }
 
         .social-links a:hover {
-            text-decoration: underline;
+            color: #555;
+        }
+
+        footer {
+            background-color: #1a1a1a;
+            color: #fff;
+            text-align: center;
+            padding: 1rem 0;
+            margin-top: 2rem;
+        }
+
+        @media (max-width: 768px) {
+            .about img,
+            .about p {
+                width: 100%;
+                margin: 1rem 0;
+            }
+
+            .portfolio img {
+                width: calc(50% - 20px);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .portfolio img {
+                width: 100%;
+            }
         }
     </style>
 </head>
@@ -112,15 +231,23 @@
     <div class="container">
         <section id="about">
             <h2>About Me</h2>
-            <p>Hello ! I'm Rohan Doijode, a passionate Data Engineer and photographer. I specialize in designing and implementing data solutions that enable businesses to harness the power of their data. When I'm not working on data projects, I love capturing the beauty of the world through my lens. Check out my work below!</p>
+            <div class="about">
+                <p>
+                    Hello! I'm Rohan Doijode, a passionate data engineer and photographer. I specialize in designing and implementing data solutions that enable businesses to harness the power of their data. With a keen eye for detail and creativity, I also capture the beauty of the world through my lens. When I'm not analyzing data, you'll find me exploring new places with my camera in hand.
+                </p>
+                <img src="https://via.placeholder.com/400x300" alt="Rohan Doijode">
+            </div>
         </section>
 
         <section id="portfolio">
             <h2>Photography Portfolio</h2>
             <div class="portfolio">
-                <img src="https://via.placeholder.com/800x600" alt="Sample Image 1">
-                <img src="https://via.placeholder.com/800x600" alt="Sample Image 2">
-                <img src="https://via.placeholder.com/800x600" alt="Sample Image 3">
+                <img src="https://via.placeholder.com/400x300" alt="Sample Image 1">
+                <img src="https://via.placeholder.com/400x300" alt="Sample Image 2">
+                <img src="https://via.placeholder.com/400x300" alt="Sample Image 3">
+                <img src="https://via.placeholder.com/400x300" alt="Sample Image 4">
+                <img src="https://via.placeholder.com/400x300" alt="Sample Image 5">
+                <img src="https://via.placeholder.com/400x300" alt="Sample Image 6">
             </div>
         </section>
 
@@ -128,19 +255,16 @@
             <h2>Contact Me</h2>
             <p>Feel free to reach out if you're interested in collaborating on data projects or photography. You can contact me through the following platforms:</p>
             <div class="contact-info">
-                <p>Email: <a href="mailto:your.email@example.com">your.email@example.com</a></p>
+                <p>Email: <a href="mailto:rohan.doijode@example.com">rohan.doijode@example.com</a></p>
                 <p>Phone: (123) 456-7890</p>
             </div>
             <div class="social-links">
-                <a href="https://github.com/yourusername" target="_blank">GitHub</a>
-                <a href="https://medium.com/@yourusername" target="_blank">Medium</a>
-                <a href="https://www.linkedin.com/in/yourusername" target="_blank">LinkedIn</a>
+                <a href="https://github.com/yourusername" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/a/ae/Github-desktop-logo-symbol.svg" alt="GitHub" width="30"></a>
+                <a href="https://medium.com/@yourusername" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/e/ec/Medium_logo_Monogram.svg" alt="Medium" width="30"></a>
+                <a href="https://www.linkedin.com/in/yourusername" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/e/e9/Linkedin_icon.svg" alt="LinkedIn" width="30"></a>
             </div>
         </section>
     </div>
 
     <footer>
-        <p>&copy; 2024 Rohan Doijode. All rights reserved.</p>
-    </footer>
-</body>
-</html>
+        <
