@@ -5,153 +5,166 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rohan's Corner</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
     <style>
         body {
             margin: 0;
-            font-family: 'Roboto', sans-serif;
-            background-color: #f4f4f4;
-            color: #333;
+            font-family: 'Press Start 2P', cursive;
+            background-color: #121212;
+            color: #ffffff;
         }
 
         .container {
             padding: 20px;
-            max-width: 1200px;
+            max-width: 1000px;
             margin: 0 auto;
         }
 
         header {
             text-align: center;
-            padding: 50px 20px;
-            background: linear-gradient(135deg, #00c6ff, #0072ff);
-            color: #ffffff;
-            position: relative;
+            padding: 20px;
+            background: #141e30;
+            color: #e0e0e0;
         }
 
         header h1 {
             margin: 0;
-            font-size: 3em;
-            font-weight: bold;
+            font-size: 2.5em;
+            color: #00ffab;
+            text-shadow: 0 0 8px #00ffab;
+            animation: neon-glow 1.5s infinite alternate, blink 1s infinite;
         }
 
         header nav {
-            margin-top: 20px;
+            margin-top: 10px;
         }
 
         header nav a {
             margin: 0 15px;
             text-decoration: none;
-            color: #ffffff;
-            font-weight: bold;
-            padding-bottom: 5px;
-            border-bottom: 2px solid transparent;
-            transition: border-bottom 0.3s;
+            color: #e0e0e0;
+            transition: color 0.3s;
         }
 
         header nav a:hover {
-            border-bottom: 2px solid #ffdd57;
-        }
-
-        .illustration {
-            position: absolute;
-            bottom: -20px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 100%;
-            max-width: 400px;
+            color: #f040ff;
+            text-shadow: 0 0 5px #f040ff;
         }
 
         section {
-            margin-top: 60px;
+            margin-top: 40px;
         }
 
         .section-title {
-            font-size: 2.5em;
-            color: #0072ff;
+            font-size: 2em;
             margin-bottom: 20px;
-            text-align: center;
+            color: #ff2e63;
+            text-shadow: 0 0 10px #ff2e63;
+            animation: neon-glow 3s infinite alternate, blink 1s infinite;
         }
 
         .content {
-            background-color: #ffffff;
-            padding: 30px;
+            background-color: #212121;
+            padding: 20px;
             border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
         }
 
         .content p {
-            line-height: 1.8;
-            color: #555;
+            line-height: 1.6;
         }
 
         .blog-entry {
-            margin-bottom: 40px;
+            margin-bottom: 30px;
         }
 
         .blog-entry h3 {
-            font-size: 2em;
-            color: #00c6ff;
+            font-size: 1.5em;
+            color: #00adb5;
+            text-shadow: 0 0 10px #00adb5;
+            animation: neon-glow 1.5s infinite alternate;
         }
 
         .blog-entry p {
-            margin-top: 15px;
+            margin-top: 10px;
         }
 
         .blog-entry a {
             text-decoration: none;
-            color: #ff8c42;
-            font-weight: bold;
-            transition: color 0.3s;
+            color: #00adb5;
         }
 
         .blog-entry a:hover {
-            color: #ffdd57;
+            color: #ff2e63;
+            text-shadow: 0 0 5px #ff2e63;
         }
 
         footer {
             text-align: center;
-            padding: 30px 20px;
-            background: #0072ff;
-            color: #ffffff;
-            margin-top: 60px;
+            padding: 20px;
+            background: #141e30;
+            color: #e0e0e0;
+            margin-top: 40px;
         }
 
         footer p {
-            font-size: 1.2em;
+            font-size: 1em;
+            animation: blink 1s infinite;
         }
 
         footer a {
-            color: #ffdd57;
+            color: #00adb5;
             text-decoration: none;
-            font-weight: bold;
-        }
-
-        footer a:hover {
-            color: #00c6ff;
+            font-size: 1.2em;
+            animation: blink 1s infinite;
         }
 
         .social-media a {
-            margin: 0 10px;
             text-decoration: none;
-            color: #ffdd57;
-            font-size: 1.5em;
+            color: #00adb5;
+            font-size: 1.2em;
         }
 
         .social-media a:hover {
-            color: #00c6ff;
+            color: #ff2e63;
+        }
+
+        @keyframes neon-glow {
+            from {
+                text-shadow: 0 0 10px, 0 0 20px, 0 0 30px, 0 0 40px, 0 0 50px, 0 0 60px, 0 0 70px;
+            }
+
+            to {
+                text-shadow: 0 0 20px, 0 0 30px, 0 0 40px, 0 0 50px, 0 0 60px, 0 0 70px, 0 0 80px;
+            }
+        }
+
+        @keyframes blink {
+            0% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
         }
 
         @media (max-width: 600px) {
             header h1 {
-                font-size: 2.2em;
+                font-size: 2em;
+                text-shadow: 0 0 6px #00ffab;
             }
 
             .section-title {
-                font-size: 2em;
+                font-size: 1.5em;
             }
 
             .blog-entry h3 {
-                font-size: 1.5em;
+                font-size: 1.2em;
             }
         }
     </style>
@@ -165,17 +178,18 @@
             <a href="#leisure">Leisure</a>
             <a href="#contact">Contact</a>
         </nav>
-        <img src="illustration.svg" alt="Illustration" class="illustration">
     </header>
 
     <div class="container">
+        <!-- Work Section -->
         <section id="work">
             <div class="section-title">Work</div>
             <div class="content">
                 <div class="job-bio">
                     <h3>Data Engineer at a Biotech Corp</h3>
-                    <p>Hello! I'm Rohan Doijode, a passionate Data Evangelist, building robust data pipelines and scalable analytics solutions. I love working with data and turning complex datasets into insights.</p>
+                    <p>Hello! I'm Rohan Doijode, also a passionate Data Evangelist in building robust data pipelines and scalable analytics solutions. Love working with data and turning complex datasets into insights.</p>
                 </div>
+
                 <div class="blog-entry">
                     <h3>Technical Blogs</h3>
                     <p>Check out my latest technical blogs on Data Engineering, big data technologies, and cloud solutions:</p>
@@ -186,6 +200,7 @@
             </div>
         </section>
 
+        <!-- Leisure Section -->
         <section id="leisure">
             <div class="section-title">Leisure</div>
             <div class="content">
@@ -194,8 +209,10 @@
                     <p>I love exploring new places and capturing beautiful moments. Here are some of my travel blogs:</p>
                     <ul>
                         <li><a href="https://medium.com/@rohandoijode/my-travel-blog-1" target="_blank">Solo Tour 2023</a></li>
+                        <li><a href="blog1.html" target="_blank">Camping at Kamset</a></li>
                     </ul>
                 </div>
+
                 <div class="blog-entry">
                     <h3>Photography</h3>
                     <p>Photography is my way of expressing creativity. Check out some of my favorite shots on <a href="https://github.com/rohandoijode/photography" target="_blank">GitHub</a>.</p>
@@ -203,6 +220,7 @@
             </div>
         </section>
 
+        <!-- Contact Section -->
         <section id="contact">
             <div class="section-title">Contact Me</div>
             <div class="content">
