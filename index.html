@@ -5,50 +5,53 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rohan's Corner</title>
-    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
         body {
             margin: 0;
-            font-family: 'Press Start 2P', cursive;
-            background-color: #121212;
-            color: #ffffff;
+            font-family: 'Poppins', sans-serif;
+            background-color: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
         }
 
         .container {
             padding: 20px;
             max-width: 1000px;
             margin: 0 auto;
+            background-color: #ffffff;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
         }
 
         header {
             text-align: center;
-            padding: 20px;
-            background: #141e30;
-            color: #e0e0e0;
+            padding: 30px;
+            background-color: #333;
+            color: #fff;
+            border-radius: 8px 8px 0 0;
         }
 
         header h1 {
             margin: 0;
             font-size: 2.5em;
-            color: #00ffab;
-            text-shadow: 0 0 8px #00ffab;
-            animation: neon-glow 1.5s infinite alternate, blink 1s infinite;
+            font-weight: 600;
         }
 
         header nav {
-            margin-top: 10px;
+            margin-top: 20px;
         }
 
         header nav a {
             margin: 0 15px;
             text-decoration: none;
-            color: #e0e0e0;
+            color: #fff;
+            font-weight: 400;
             transition: color 0.3s;
         }
 
         header nav a:hover {
-            color: #f040ff;
-            text-shadow: 0 0 5px #f040ff;
+            color: #ff5722;
         }
 
         section {
@@ -56,22 +59,21 @@
         }
 
         .section-title {
-            font-size: 2em;
+            font-size: 1.8em;
             margin-bottom: 20px;
-            color: #ff2e63;
-            text-shadow: 0 0 10px #ff2e63;
-            animation: neon-glow 3s infinite alternate, blink 1s infinite;
+            color: #333;
+            font-weight: 600;
+            border-bottom: 2px solid #ff5722;
+            padding-bottom: 10px;
         }
 
         .content {
-            background-color: #212121;
             padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
         }
 
         .content p {
-            line-height: 1.6;
+            line-height: 1.8;
+            margin-bottom: 20px;
         }
 
         .blog-entry {
@@ -80,83 +82,65 @@
 
         .blog-entry h3 {
             font-size: 1.5em;
-            color: #00adb5;
-            text-shadow: 0 0 10px #00adb5;
-            animation: neon-glow 1.5s infinite alternate;
+            color: #333;
+            font-weight: 500;
         }
 
         .blog-entry p {
             margin-top: 10px;
+            color: #666;
         }
 
         .blog-entry a {
             text-decoration: none;
-            color: #00adb5;
+            color: #ff5722;
+            font-weight: 500;
+            transition: color 0.3s;
         }
 
         .blog-entry a:hover {
-            color: #ff2e63;
-            text-shadow: 0 0 5px #ff2e63;
+            color: #e64a19;
         }
 
         footer {
             text-align: center;
             padding: 20px;
-            background: #141e30;
-            color: #e0e0e0;
+            background-color: #333;
+            color: #fff;
             margin-top: 40px;
+            border-radius: 0 0 8px 8px;
         }
 
         footer p {
             font-size: 1em;
-            animation: blink 1s infinite;
+            margin: 0;
         }
 
         footer a {
-            color: #00adb5;
+            color: #ff5722;
             text-decoration: none;
-            font-size: 1.2em;
-            animation: blink 1s infinite;
+            font-weight: 500;
+        }
+
+        footer a:hover {
+            color: #e64a19;
         }
 
         .social-media a {
             text-decoration: none;
-            color: #00adb5;
+            color: #ff5722;
             font-size: 1.2em;
+            margin: 0 10px;
+            transition: color 0.3s;
         }
 
         .social-media a:hover {
-            color: #ff2e63;
-        }
-
-        @keyframes neon-glow {
-            from {
-                text-shadow: 0 0 10px, 0 0 20px, 0 0 30px, 0 0 40px, 0 0 50px, 0 0 60px, 0 0 70px;
-            }
-
-            to {
-                text-shadow: 0 0 20px, 0 0 30px, 0 0 40px, 0 0 50px, 0 0 60px, 0 0 70px, 0 0 80px;
-            }
-        }
-
-        @keyframes blink {
-            0% {
-                opacity: 1;
-            }
-
-            50% {
-                opacity: 0;
-            }
-
-            100% {
-                opacity: 1;
-            }
+            color: #e64a19;
         }
 
         @media (max-width: 600px) {
             header h1 {
                 font-size: 2em;
-                text-shadow: 0 0 6px #00ffab;
             }
 
             .section-title {
@@ -187,7 +171,7 @@
             <div class="content">
                 <div class="job-bio">
                     <h3>Data Engineer at a Biotech Corp</h3>
-                    <p>Hello! I'm Rohan Doijode, also a passionate Data Evangelist in building robust data pipelines and scalable analytics solutions. Love working with data and turning complex datasets into insights.</p>
+                    <p>Hello! I'm Rohan Doijode, a passionate Data Evangelist who enjoys building robust data pipelines and scalable analytics solutions. I love working with data and turning complex datasets into valuable insights.</p>
                 </div>
 
                 <div class="blog-entry">
@@ -224,7 +208,7 @@
         <section id="contact">
             <div class="section-title">Contact Me</div>
             <div class="content">
-                <p>Reach out to me via email at <a href="mailto:doijoderohan882@gmail.com">doijoderohan882@gmail.com</a> or connect with me on <a href="https://www.linkedin.com/in/rohandoijode" target="_blank">LinkedIn</a>.</p>
+                <p>Feel free to reach out via email at <a href="mailto:doijoderohan882@gmail.com">doijoderohan882@gmail.com</a> or connect with me on <a href="https://www.linkedin.com/in/rohandoijode" target="_blank">LinkedIn</a>.</p>
                 <div class="social-media">
                     <a href="https://www.facebook.com/rohandoijode" target="_blank">Facebook</a>
                     <a href="https://www.instagram.com/rohan.csv" target="_blank">Instagram</a>
