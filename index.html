@@ -4,81 +4,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rohan's Corner</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <title>Rohan Doijode - Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
     <style>
         body {
             margin: 0;
-            font-family: 'Inter', sans-serif;
-            background: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
+            font-family: 'Open Sans', sans-serif;
+            background-color: #f3f4f6;
             color: #333;
-            padding: 20px;
-            overflow-x: hidden;
-        }
-
-        .container {
-            max-width: 900px;
-            margin: 0 auto;
-            background-color: #ffffff;
-            padding: 20px;
-            border-radius: 16px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
-            transform: scale(0.95);
-            animation: scaleUp 1s ease-in-out forwards;
-        }
-
-        @keyframes scaleUp {
-            to {
-                transform: scale(1);
-            }
+            line-height: 1.6;
         }
 
         header {
-            text-align: center;
-            padding: 50px 0;
-            background: #ff6347;
+            background-color: #4CAF50;
             color: #fff;
-            border-radius: 12px;
-            position: relative;
-            animation: fadeInDown 1s ease-in-out;
-        }
-
-        @keyframes fadeInDown {
-            from {
-                opacity: 0;
-                transform: translateY(-50px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+            padding: 15px 20px;
+            text-align: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
         }
 
         header h1 {
-            font-family: 'Playfair Display', serif;
-            font-size: 3em;
             margin: 0;
-        }
-
-        header nav {
-            margin-top: 20px;
+            font-size: 2em;
         }
 
         header nav a {
-            margin: 0 15px;
+            color: #fff;
             text-decoration: none;
-            color: #ffffff;
+            margin: 0 15px;
             font-weight: bold;
-            padding: 8px 16px;
-            background-color: rgba(255, 255, 255, 0.2);
-            border-radius: 5px;
-            transition: background-color 0.3s, transform 0.3s;
         }
 
         header nav a:hover {
-            background-color: #fff;
             color: #ff6347;
-            transform: scale(1.1);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 80px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
 
         section {
@@ -88,104 +59,64 @@
         .section-title {
             font-size: 2.5em;
             margin-bottom: 20px;
-            color: #ff6347;
-            position: relative;
-        }
-
-        .section-title::before {
-            content: '';
-            position: absolute;
-            left: 0;
-            bottom: -5px;
-            width: 50px;
-            height: 5px;
-            background-color: #ff6347;
+            color: #333;
+            border-bottom: 2px solid #4CAF50;
+            padding-bottom: 10px;
         }
 
         .content {
-            background-color: #f9f9f9;
             padding: 20px;
-            border-radius: 12px;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-            animation: fadeInUp 1s ease-in-out;
         }
 
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+        .portfolio-item {
+            margin-bottom: 20px;
         }
 
-        .blog-entry h3 {
-            font-size: 1.7em;
-            color: #333;
-            margin-bottom: 10px;
+        .portfolio-item h3 {
+            font-size: 1.8em;
+            color: #4CAF50;
+        }
+
+        .portfolio-item p {
+            margin-top: 10px;
+        }
+
+        .blog-entry {
+            margin-bottom: 20px;
         }
 
         .blog-entry a {
+            color: #4CAF50;
             text-decoration: none;
-            color: #007bff;
             font-weight: bold;
-            background-color: #fff;
-            padding: 5px 10px;
-            border-radius: 5px;
-            transition: background-color 0.3s, color 0.3s;
         }
 
         .blog-entry a:hover {
-            background-color: #ff6347;
-            color: #fff;
+            color: #ff6347;
         }
 
         footer {
             text-align: center;
-            padding: 40px 0;
-            margin-top: 40px;
-            color: #666;
-            background: linear-gradient(45deg, #ff6347, #ff9671);
-            border-radius: 8px;
-            position: relative;
-            animation: fadeInUp 2s ease-in-out;
-        }
-
-        footer p {
-            margin: 0;
-            font-size: 1.1em;
-            color: #fff;
+            padding: 20px;
+            background-color: #f1f1f1;
+            color: #555;
+            font-size: 0.9em;
         }
 
         footer a {
-            color: #fff;
+            color: #4CAF50;
             text-decoration: none;
-            font-weight: bold;
         }
 
         footer a:hover {
-            color: #ff6347;
-        }
-
-        .social-media a {
-            margin: 0 10px;
-            text-decoration: none;
-            color: #fff;
-            font-weight: bold;
-            font-size: 1.5em;
-        }
-
-        .social-media a:hover {
-            color: #007bff;
+            text-decoration: underline;
         }
     </style>
 </head>
 
 <body>
     <header>
-        <h1>Rohan's Corner</h1>
+        <h1>Rohan Doijode</h1>
         <nav>
             <a href="#work">Work</a>
             <a href="#leisure">Leisure</a>
@@ -198,18 +129,11 @@
         <section id="work">
             <div class="section-title">Work</div>
             <div class="content">
-                <div class="job-bio">
+                <div class="portfolio-item">
                     <h3>Data Engineer at a Biotech Corp</h3>
-                    <p>Hello! I'm Rohan Doijode, a passionate Data Evangelist building robust data pipelines and scalable analytics solutions. I love working with data and turning complex datasets into insights.</p>
+                    <p>Hello! I'm Rohan Doijode, a passionate Data Engineer working on building robust data pipelines and scalable analytics solutions. Check out my work and projects below.</p>
                 </div>
-
-                <div class="blog-entry">
-                    <h3>Technical Blogs</h3>
-                    <p>Check out my latest technical blogs on Data Engineering, big data technologies, and cloud solutions:</p>
-                    <ul>
-                        <li><a href="https://medium.com/@rdoijode/healthcare-in-the-age-of-general-ai-5e2a11b43ed1" target="_blank">Healthcare in Age of Gen AI</a></li>
-                    </ul>
-                </div>
+                <!-- Add more portfolio items here -->
             </div>
         </section>
 
@@ -218,40 +142,31 @@
             <div class="section-title">Leisure</div>
             <div class="content">
                 <div class="blog-entry">
-                    <h3>Travel Blog</h3>
-                    <p>I love exploring new places and capturing beautiful moments. Here are some of my travel blogs:</p>
+                    <h3>Travel Blogs</h3>
+                    <p>Explore my travel experiences:</p>
                     <ul>
                         <li><a href="blog1.html" target="_blank">Kamshet Camping</a></li>
                         <li><a href="blog2.html" target="_blank">Goa Trip</a></li>
                     </ul>
                 </div>
-
                 <div class="blog-entry">
                     <h3>Photography</h3>
-                    <p>Photography is my way of expressing creativity. Check out some of my favorite shots on <a href="https://github.com/rohandoijode/photography" target="_blank">GitHub</a>.</p>
+                    <p>Check out some of my favorite shots on <a href="https://github.com/rohandoijode/photography" target="_blank">GitHub</a>.</p>
                 </div>
             </div>
         </section>
 
         <!-- Contact Section -->
         <section id="contact">
-            <div class="section-title">Contact Me</div>
+            <div class="section-title">Contact</div>
             <div class="content">
-                <p>Reach out to me via email at <a href="mailto:doijoderohan882@gmail.com">doijoderohan882@gmail.com</a> or connect with me on <a href="https://www.linkedin.com/in/rohandoijode" target="_blank">LinkedIn</a>.</p>
-                <div class="social-media">
-                    <a href="https://www.facebook.com/rohandoijode" target="_blank">Facebook</a>
-                    <a href="https://www.instagram.com/rohan.csv" target="_blank">Instagram</a>
-                </div>
+                <p>Feel free to reach out to me via email at <a href="mailto:doijoderohan882@gmail.com">doijoderohan882@gmail.com</a> or connect with me on <a href="https://www.linkedin.com/in/rohandoijode" target="_blank">LinkedIn</a>.</p>
             </div>
         </section>
     </div>
 
     <footer>
-        <p>&copy; 2024 Rohan Doijode. All rights reserved.</p>
-        <div class="social-media">
-            <a href="https://www.facebook.com/rohandoijode" target="_blank">Facebook</a>
-            <a href="https://www.instagram.com/rohan.csv" target="_blank">Instagram</a>
-        </div>
+        <p>&copy; 2024 Rohan Doijode. All rights reserved. | <a href="https://github.com/rohandoijode">Back to GitHub</a></p>
     </footer>
 </body>
 
