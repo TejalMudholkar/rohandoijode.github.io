@@ -5,40 +5,107 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Goa Trip</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
     <style>
         body {
             margin: 0;
-            font-family: 'Inter', sans-serif;
-            background-color: #f4f4f4;
+            font-family: 'Open Sans', sans-serif;
+            background-color: #f3f4f6;
             color: #333;
-            padding: 20px;
+            line-height: 1.6;
         }
 
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        header {
+            background-color: #4CAF50;
+            color: #fff;
+            padding: 15px 20px;
+            text-align: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
         }
 
-        h1 {
-            font-size: 2.5em;
-            margin-bottom: 20px;
+        header h1 {
+            margin: 0;
+            font-size: 2em;
+        }
+
+        header nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+
+        header nav a:hover {
             color: #ff6347;
         }
 
-        h2 {
-            font-size: 1.8em;
-            margin-top: 40px;
-            margin-bottom: 20px;
-            color: #333;
+        .container {
+            max-width: 1200px;
+            margin: 80px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
 
-        p {
-            line-height: 1.6;
+        section {
+            margin-bottom: 40px;
+        }
+
+        .section-title {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            color: #333;
+            border-bottom: 2px solid #4CAF50;
+            padding-bottom: 10px;
+        }
+
+        .content {
+            padding: 20px;
+        }
+
+        .portfolio-item {
+            margin-bottom: 20px;
+        }
+
+        .portfolio-item h3 {
+            font-size: 1.8em;
+            color: #4CAF50;
+        }
+
+        .portfolio-item p {
+            margin-top: 10px;
+        }
+
+        .blog-entry {
+            margin-bottom: 20px;
+        }
+
+        .blog-entry a {
+            color: #4CAF50;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .blog-entry a:hover {
+            color: #ff6347;
+        }
+
+        .trip-day {
+            margin-bottom: 40px;
+        }
+
+        .trip-day h2 {
+            font-size: 2em;
+            color: #4CAF50;
+            margin-bottom: 20px;
+        }
+
+        .trip-day p {
             margin-bottom: 20px;
         }
 
@@ -49,68 +116,73 @@
             margin-bottom: 20px;
         }
 
-        a {
-            color: #007bff;
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #f1f1f1;
+            color: #555;
+            font-size: 0.9em;
+        }
+
+        footer a {
+            color: #4CAF50;
             text-decoration: none;
         }
 
-        a:hover {
+        footer a:hover {
             text-decoration: underline;
-        }
-
-        .image-container {
-            display: flex;
-            justify-content: space-between;
-            gap: 10px;
-        }
-
-        .image-container img {
-            width: 48%;
         }
     </style>
 </head>
 
 <body>
-    <div class="container">
-        <h1>Goa Trip</h1>
-        <p>My Goa trip was filled with stunning beaches, vibrant nightlife, and a rich cultural experience. The serene beauty of the Arabian Sea, coupled with the lively atmosphere, made it an unforgettable journey.</p>
+    <header>
+        <h1>Rohan Doijode - Goa Trip</h1>
+        <nav>
+            <a href="#day1">Day 1</a>
+            <a href="#day2">Day 2</a>
+            <a href="#day3">Day 3</a>
+            <a href="#day4">Day 4</a>
+        </nav>
+    </header>
 
+    <div class="container">
         <!-- Day 1 -->
-        <h2>Day 1: Arrival at Palolem and Beachside Bliss</h2>
-        <p>We arrived at Madgaon and headed straight to Palolem Beach. After settling into our hostel, we indulged in delicious Italian cuisine at Bridge Inn. The rest of the day was spent walking along the coast, enjoying the cool beach breeze and snapping some stunning sunset pictures.</p>
-        <div class="image-container">
-            <img src="https://github.com/rohandoijode/rohandoijode.github.io/raw/main/src/Palolem.jpeg" alt="Palolem Beach">
-            <img src="https://github.com/rohandoijode/rohandoijode.github.io/raw/main/src/Boat.jpeg" alt="Italian Cuisine at Bridge Inn">
-        </div>
-        <p>Later, we had dinner at a nearby restaurant, offering a mix of continental dishes before retreating to the hostel for the night.</p>
+        <section id="day1" class="trip-day">
+            <h2>Day 1: Arrival at Palolem – The Calm Before the Chaos</h2>
+            <p>We arrived at Madgaon station with the excitement of a cinematic road trip ahead. After picking up our rental car, we drove straight to Palolem Beach, much like Akash, Sameer, and Siddharth on their carefree Goa trip in *Dil Chahta Hai*. The beach was just a short walk from our hostel, and we enjoyed an Italian meal at Bridge Inn, embracing the quiet charm of the coast. The rest of the day was spent soaking in the coastal breeze and capturing those perfect snapshots.</p>
+            <img src="https://github.com/rohandoijode/rohandoijode.github.io/raw/main/src/bridgeinn.jpg" alt="Bridge Inn">
+            <img src="https://github.com/rohandoijode/rohandoijode.github.io/raw/main/src/palolem.jpg" alt="Palolem Beach">
+        </section>
 
         <!-- Day 2 -->
-        <h2>Day 2: Kayaking Adventures at Cola Beach & Portuguese Charm</h2>
-        <p>We started Day 2 with a heavy breakfast at Caesar’s Café, run by two teenage boys from Tuscany. After that, we drove to Cola Beach for kayaking in the backwaters—a peaceful yet thrilling experience! We checked into Fenacia Resort later, a beautiful Portuguese-themed property, and spent the evening at Cabo de Rama watching the breathtaking sunset.</p>
-        <div class="image-container">
-            <img src="https://github.com/rohandoijode/rohandoijode.github.io/raw/main/src/Kayaking.jpeg" alt="Kayaking at Cola Beach">
-            <img src="https://github.com/rohandoijode/rohandoijode.github.io/raw/main/src/Cabo.jpeg" alt="Sunset at Cabo de Rama">
-        </div>
-        <p>The night ended on a high note with music, dancing, and a lively atmosphere at Fenacia Resort.</p>
+        <section id="day2" class="trip-day">
+            <h2>Day 2: Kayaking at Cola Beach – Living in the Moment</h2>
+            <p>The second day was all about adventure. After breakfast at Caesar's Café, we drove to Cola Beach and began our kayaking session, channeling the same carefree spirit as Sameer from *Dil Chahta Hai*. Paddling through the serene backwaters, it was a moment of calm and reflection. Our stay at the Portuguese-themed Fenacia Resort later in the day gave us a glimpse of Goa's rich colonial past. We ended the evening with a beautiful sunset at Cabo De Rama, creating memories that, much like Sid's art, would last forever.</p>
+            <img src="https://github.com/rohandoijode/rohandoijode.github.io/raw/main/src/kayaking.jpg" alt="Kayaking at Cola Beach">
+            <img src="https://github.com/rohandoijode/rohandoijode.github.io/raw/main/src/caboderama.jpg" alt="Cabo De Rama Sunset">
+        </section>
 
         <!-- Day 3 -->
-        <h2>Day 3: Solitude at Cabo de Rama & Music at Benaulim Beach</h2>
-        <p>I began the day with some solitude at Cabo de Rama. The peaceful morning by the sea was a perfect way to start the day. Afterward, we visited Benaulim Beach, where Johncy's Café entertained us with live music as we enjoyed lunch with the sound of the waves in the background.</p>
-        <div class="image-container">
-            <img src="https://github.com/rohandoijode/rohandoijode.github.io/raw/main/src/Cafe.jpeg" alt="Morning at Cabo de Rama">
-            <img src="https://github.com/rohandoijode/rohandoijode.github.io/raw/main/src/Johncy.jpeg" alt="Johncy's Café at Benaulim Beach">
-        </div>
-        <p>The day ended with an incredible fire-breathing show at Southern Deck, leaving us in awe as we enjoyed live music and dinner before heading back to the hotel.</p>
+        <section id="day3" class="trip-day">
+            <h2>Day 3: Cabo Da Rama Solitude & Benaulim Beach – Reflection and Revelry</h2>
+            <p>I decided to start Day 3 solo, returning to Cabo Da Rama for a quiet morning of reflection—much like Siddharth seeking solace in the beauty of the ocean. The day shifted from calm to lively as we explored Benaulim Beach and enjoyed live music at Johncy's Café. As we strolled down the beach, the music echoed the vibes of Goa’s laid-back yet vibrant culture. The day ended with a fire-breathing show at Southern Deck, leaving us in awe of the raw energy and talent.</p>
+            <img src="https://github.com/rohandoijode/rohandoijode.github.io/raw/main/src/johncycafe.jpg" alt="Johncy's Café">
+            <img src="https://github.com/rohandoijode/rohandoijode.github.io/raw/main/src/firebreather.jpg" alt="Firebreathing Show at Southern Deck">
+        </section>
 
         <!-- Day 4 -->
-        <h2>Day 4: Farewell to Goa</h2>
-        <p>The final day was bittersweet as we packed our bags and returned the rental car. Although it was sad to leave, the memories of sunsets, beaches, and laughter stayed with us as we boarded the train back to Panvel.</p>
-        <div class="image-container">
-            <img src="https://github.com/rohandoijode/rohandoijode.github.io/raw/main/src/DCH.jpeg" alt="Returning the Rental Car">
-            <img src="https://github.com/rohandoijode/rohandoijode.github.io/raw/main/src/abc.jpeg" alt="Train Station in Goa">
-        </div>
-        <p>Goa has once again left its mark, and I can't wait to return for more adventures!</p>
+        <section id="day4" class="trip-day">
+            <h2>Day 4: Farewell to Goa – Bittersweet Goodbyes</h2>
+            <p>The final day was a mix of emotions as we packed up and returned the rental car. Much like the friends parting ways at the end of *Dil Chahta Hai*, we left with promises to return someday. Goa, with its beauty and energy, left an indelible mark on us. As the train pulled away from the station, we couldn't help but hum the iconic tune, *“Dil Chahta Hai, kabhi na beetein chamkeele din...”*</p>
+            <img src="https://github.com/rohandoijode/rohandoijode.github.io/raw/main/src/goatrain.jpg" alt="Train Farewell">
+            <img src="https://github.com/rohandoijode/rohandoijode.github.io/raw/main/src/goalandscape.jpg" alt="Goa Landscape">
+        </section>
     </div>
+
+    <footer>
+        <p>&copy; 2024 Rohan Doijode. All rights reserved. | <a href="https://github.com/rohandoijode">Back to GitHub</a></p>
+    </footer>
 </body>
 
 </html>
