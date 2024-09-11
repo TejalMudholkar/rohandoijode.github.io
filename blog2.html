@@ -28,6 +28,7 @@
             font-size: 2.5em;
             margin-bottom: 20px;
             color: #ff6347;
+            text-align: center;
         }
 
         h2 {
@@ -35,6 +36,7 @@
             margin-top: 40px;
             margin-bottom: 20px;
             color: #333;
+            text-align: center;
         }
 
         p {
@@ -42,12 +44,18 @@
             margin-bottom: 20px;
         }
 
-        img {
-            width: 100%;
+        .image-container {
+            display: grid;
+            grid-template-columns: 1fr; /* Single column grid for center alignment */
+            justify-items: center; /* Centers each image horizontally */
+            gap: 20px;
+        }
+
+        .image-container img {
+            max-width: 100%; /* Ensures images are responsive */
             height: auto;
+            object-fit: contain;
             border-radius: 8px;
-            margin-bottom: 20px;
-            object-fit: cover;
         }
 
         a {
@@ -57,18 +65,6 @@
 
         a:hover {
             text-decoration: underline;
-        }
-
-        .image-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-            gap: 15px;
-        }
-
-        .image-container img {
-            width: 100%;
-            height: auto;
-            object-fit: contain;
         }
     </style>
 </head>
