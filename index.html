@@ -7,23 +7,30 @@
     <title>Rohan Doijode - Portfolio</title>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
     <style>
+        /* Global Styles */
         body {
             margin: 0;
             font-family: 'Open Sans', sans-serif;
-            background-color: #f9f9f9;
+            background-color: #f3f4f6;
             color: #333;
             line-height: 1.6;
-            transition: background-color 0.5s ease-in-out;
+            transition: all 0.4s ease-in-out;
         }
 
-        /* Smooth Scroll */
-        html {
-            scroll-behavior: smooth;
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s ease;
         }
 
+        a:hover {
+            color: #0071e3;
+        }
+
+        /* Header Styling */
         header {
-            background-color: #fff;
-            color: #333;
+            background-color: #000;
+            color: #fff;
             padding: 20px 40px;
             text-align: center;
             position: fixed;
@@ -31,155 +38,146 @@
             top: 0;
             left: 0;
             z-index: 1000;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-            transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+            transition: background-color 0.4s ease-in-out;
         }
 
         header h1 {
             margin: 0;
             font-size: 2.5em;
             font-weight: 600;
+            letter-spacing: 1px;
         }
 
         header nav a {
-            color: #333;
-            text-decoration: none;
-            margin: 0 20px;
+            color: #fff;
+            text-transform: uppercase;
             font-weight: 600;
-            font-size: 1.1em;
-            position: relative;
-            transition: color 0.3s ease-in-out;
+            margin: 0 20px;
+            font-size: 0.9em;
         }
 
         header nav a:hover {
-            color: #007aff;
+            color: #0071e3;
         }
 
-        /* Adding subtle underline effect on hover */
-        header nav a::after {
-            content: "";
-            position: absolute;
-            width: 0;
-            height: 2px;
-            background-color: #007aff;
-            left: 0;
-            bottom: -5px;
-            transition: width 0.3s;
+        /* Smooth Scrolling */
+        html {
+            scroll-behavior: smooth;
         }
 
-        header nav a:hover::after {
-            width: 100%;
-        }
-
-        /* Container with more white space */
+        /* Container Styles */
         .container {
             max-width: 1200px;
-            margin: 120px auto;
+            margin: 100px auto;
             padding: 40px;
             background-color: #fff;
             border-radius: 12px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-            transition: all 0.5s ease-in-out;
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+            transition: box-shadow 0.4s ease-in-out;
         }
 
-        /* Section Titles */
-        .section-title {
-            font-size: 2.8em;
-            margin-bottom: 30px;
-            color: #333;
-            text-align: center;
-            font-weight: 600;
-            position: relative;
-        }
-
-        .section-title::after {
-            content: "";
-            position: absolute;
-            left: 50%;
-            transform: translateX(-50%);
-            bottom: -10px;
-            width: 100px;
-            height: 3px;
-            background-color: #007aff;
-            transition: width 0.3s ease;
+        .container:hover {
+            box-shadow: 0 0 50px rgba(0, 0, 0, 0.2);
         }
 
         section {
             margin-bottom: 60px;
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUp 1s ease forwards;
+        }
+
+        .section-title {
+            font-size: 3em;
+            margin-bottom: 30px;
+            color: #000;
+            border-bottom: 2px solid #0071e3;
+            padding-bottom: 10px;
+            font-weight: 600;
         }
 
         .content {
-            padding: 20px;
-            text-align: center;
+            padding: 0 20px;
+            color: #666;
         }
 
         .portfolio-item h3 {
             font-size: 2em;
-            color: #007aff;
-            font-weight: 600;
-            transition: color 0.3s ease-in-out;
+            color: #0071e3;
+            margin-bottom: 15px;
         }
 
         .portfolio-item p {
             margin-top: 15px;
-            font-size: 1.2em;
-            color: #555;
+            color: #444;
+            font-size: 1.1em;
         }
 
-        .portfolio-item:hover h3 {
-            color: #0056d2;
+        /* Blog Section */
+        .blog-entry h3 {
+            font-size: 2em;
+            color: #0071e3;
+            margin-bottom: 15px;
         }
 
-        /* Blog Entry */
+        .blog-entry p {
+            margin-bottom: 10px;
+        }
+
         .blog-entry a {
-            color: #007aff;
+            font-size: 1.2em;
+            color: #0071e3;
             text-decoration: none;
-            font-weight: 600;
-            transition: color 0.3s ease;
+            font-weight: bold;
+            position: relative;
         }
 
-        .blog-entry a:hover {
-            color: #ff6347;
+        .blog-entry a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: #0071e3;
+            transition: width 0.3s ease;
         }
 
-        /* Footer */
+        .blog-entry a:hover::after {
+            width: 100%;
+        }
+
+        /* Contact Section */
+        .contact-info {
+            font-size: 1.1em;
+            color: #444;
+            margin-bottom: 30px;
+        }
+
         footer {
             text-align: center;
-            padding: 40px 0;
+            padding: 40px;
             background-color: #f1f1f1;
-            color: #555;
-            font-size: 1em;
+            color: #666;
+            font-size: 0.9em;
         }
 
         footer a {
-            color: #007aff;
-            text-decoration: none;
-            font-weight: bold;
-            transition: color 0.3s ease-in-out;
+            color: #0071e3;
         }
 
         footer a:hover {
-            color: #ff6347;
+            text-decoration: underline;
         }
 
-        /* Smooth animations on scroll */
-        .fade-in {
-            opacity: 0;
-            transform: translateY(50px);
-            animation: fadeIn 1s forwards ease-in-out;
-        }
-
-        .fade-in.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        @keyframes fadeIn {
-            from {
+        /* Smooth Section Transitions */
+        @keyframes fadeInUp {
+            0% {
                 opacity: 0;
-                transform: translateY(50px);
+                transform: translateY(30px);
             }
-            to {
+
+            100% {
                 opacity: 1;
                 transform: translateY(0);
             }
@@ -188,6 +186,7 @@
 </head>
 
 <body>
+    <!-- Header Section -->
     <header>
         <h1>Rohan Doijode</h1>
         <nav>
@@ -197,7 +196,8 @@
         </nav>
     </header>
 
-    <div class="container fade-in">
+    <!-- Main Container -->
+    <div class="container">
         <!-- Work Section -->
         <section id="work">
             <div class="section-title">Work</div>
@@ -231,30 +231,16 @@
         <!-- Contact Section -->
         <section id="contact">
             <div class="section-title">Contact</div>
-            <div class="content">
-                <p>Feel free to reach out via email at <a href="mailto:doijoderohan882@gmail.com">doijoderohan882@gmail.com</a> or connect with me on <a href="https://www.linkedin.com/in/rohandoijode" target="_blank">LinkedIn</a>.</p>
+            <div class="content contact-info">
+                <p>Feel free to reach out via email at <a href="mailto:doijoderohan882@gmail.com">doijoderohan882@gmail.com</a> or connect on <a href="https://www.linkedin.com/in/rohandoijode" target="_blank">LinkedIn</a>.</p>
             </div>
         </section>
     </div>
 
+    <!-- Footer Section -->
     <footer>
         <p>&copy; 2024 Rohan Doijode. All rights reserved. | <a href="https://github.com/rohandoijode">Back to GitHub</a></p>
     </footer>
-
-    <script>
-        // Adding smooth fade-in effect when scrolling
-        const observer = new IntersectionObserver(entries => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                }
-            });
-        });
-
-        document.querySelectorAll('.fade-in').forEach(el => {
-            observer.observe(el);
-        });
-    </script>
 </body>
 
 </html>
