@@ -10,106 +10,179 @@
         body {
             margin: 0;
             font-family: 'Open Sans', sans-serif;
-            background-color: #f3f4f6;
+            background-color: #f9f9f9;
             color: #333;
             line-height: 1.6;
+            transition: background-color 0.5s ease-in-out;
+        }
+
+        /* Smooth Scroll */
+        html {
+            scroll-behavior: smooth;
         }
 
         header {
-            background-color: #4CAF50;
-            color: #fff;
-            padding: 15px 20px;
+            background-color: #fff;
+            color: #333;
+            padding: 20px 40px;
             text-align: center;
             position: fixed;
             width: 100%;
             top: 0;
             left: 0;
             z-index: 1000;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
         }
 
         header h1 {
             margin: 0;
-            font-size: 2em;
+            font-size: 2.5em;
+            font-weight: 600;
         }
 
         header nav a {
-            color: #fff;
+            color: #333;
             text-decoration: none;
-            margin: 0 15px;
-            font-weight: bold;
+            margin: 0 20px;
+            font-weight: 600;
+            font-size: 1.1em;
+            position: relative;
+            transition: color 0.3s ease-in-out;
         }
 
         header nav a:hover {
-            color: #ff6347;
+            color: #007aff;
         }
 
+        /* Adding subtle underline effect on hover */
+        header nav a::after {
+            content: "";
+            position: absolute;
+            width: 0;
+            height: 2px;
+            background-color: #007aff;
+            left: 0;
+            bottom: -5px;
+            transition: width 0.3s;
+        }
+
+        header nav a:hover::after {
+            width: 100%;
+        }
+
+        /* Container with more white space */
         .container {
             max-width: 1200px;
-            margin: 80px auto;
-            padding: 20px;
+            margin: 120px auto;
+            padding: 40px;
             background-color: #fff;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: all 0.5s ease-in-out;
+        }
+
+        /* Section Titles */
+        .section-title {
+            font-size: 2.8em;
+            margin-bottom: 30px;
+            color: #333;
+            text-align: center;
+            font-weight: 600;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: "";
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: -10px;
+            width: 100px;
+            height: 3px;
+            background-color: #007aff;
+            transition: width 0.3s ease;
         }
 
         section {
-            margin-bottom: 40px;
-        }
-
-        .section-title {
-            font-size: 2.5em;
-            margin-bottom: 20px;
-            color: #333;
-            border-bottom: 2px solid #4CAF50;
-            padding-bottom: 10px;
+            margin-bottom: 60px;
         }
 
         .content {
             padding: 20px;
-        }
-
-        .portfolio-item {
-            margin-bottom: 20px;
+            text-align: center;
         }
 
         .portfolio-item h3 {
-            font-size: 1.8em;
-            color: #4CAF50;
+            font-size: 2em;
+            color: #007aff;
+            font-weight: 600;
+            transition: color 0.3s ease-in-out;
         }
 
         .portfolio-item p {
-            margin-top: 10px;
+            margin-top: 15px;
+            font-size: 1.2em;
+            color: #555;
         }
 
-        .blog-entry {
-            margin-bottom: 20px;
+        .portfolio-item:hover h3 {
+            color: #0056d2;
         }
 
+        /* Blog Entry */
         .blog-entry a {
-            color: #4CAF50;
+            color: #007aff;
             text-decoration: none;
-            font-weight: bold;
+            font-weight: 600;
+            transition: color 0.3s ease;
         }
 
         .blog-entry a:hover {
             color: #ff6347;
         }
 
+        /* Footer */
         footer {
             text-align: center;
-            padding: 20px;
+            padding: 40px 0;
             background-color: #f1f1f1;
             color: #555;
-            font-size: 0.9em;
+            font-size: 1em;
         }
 
         footer a {
-            color: #4CAF50;
+            color: #007aff;
             text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease-in-out;
         }
 
         footer a:hover {
-            text-decoration: underline;
+            color: #ff6347;
+        }
+
+        /* Smooth animations on scroll */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(50px);
+            animation: fadeIn 1s forwards ease-in-out;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
     </style>
 </head>
@@ -124,16 +197,15 @@
         </nav>
     </header>
 
-    <div class="container">
+    <div class="container fade-in">
         <!-- Work Section -->
         <section id="work">
             <div class="section-title">Work</div>
             <div class="content">
                 <div class="portfolio-item">
                     <h3>Data Engineer</h3>
-                    <p>Hello! I'm Rohan Doijode, a passionate Data Engineer working on building robust data pipelines and scalable analytics solution.</p>
+                    <p>Hello! I'm Rohan Doijode, a passionate Data Engineer working on building robust data pipelines and scalable analytics solutions.</p>
                 </div>
-                <!-- Add more portfolio items here -->
             </div>
         </section>
 
@@ -160,7 +232,7 @@
         <section id="contact">
             <div class="section-title">Contact</div>
             <div class="content">
-                <p>Feel free to reach out to me via email at <a href="mailto:doijoderohan882@gmail.com">doijoderohan882@gmail.com</a> or connect with me on <a href="https://www.linkedin.com/in/rohandoijode" target="_blank">LinkedIn</a>.</p>
+                <p>Feel free to reach out via email at <a href="mailto:doijoderohan882@gmail.com">doijoderohan882@gmail.com</a> or connect with me on <a href="https://www.linkedin.com/in/rohandoijode" target="_blank">LinkedIn</a>.</p>
             </div>
         </section>
     </div>
@@ -168,6 +240,21 @@
     <footer>
         <p>&copy; 2024 Rohan Doijode. All rights reserved. | <a href="https://github.com/rohandoijode">Back to GitHub</a></p>
     </footer>
+
+    <script>
+        // Adding smooth fade-in effect when scrolling
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        });
+
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
 </body>
 
 </html>
