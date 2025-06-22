@@ -5,59 +5,67 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rohan Doijode - Portfolio</title>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Special+Elite&family=EB+Garamond:wght@400;600&display=swap" rel="stylesheet">
     <style>
-        /* Global Styles */
+        /* Vintage Global Styles */
         body {
             margin: 0;
-            font-family: 'Open Sans', sans-serif;
-            background-color: #f3f4f6;
-            color: #333;
-            line-height: 1.6;
+            font-family: 'EB Garamond', serif;
+            background: #f5ecd7 url('https://www.transparenttextures.com/patterns/old-mathematics.png');
+            color: #3e2c1c;
+            line-height: 1.7;
             transition: all 0.4s ease-in-out;
         }
 
         a {
-            text-decoration: none;
-            color: inherit;
+            text-decoration: underline;
+            color: #7c4a03;
             transition: color 0.3s ease;
         }
 
         a:hover {
-            color: #0071e3;
+            color: #b97a56;
         }
 
         /* Header Styling */
         header {
-            background-color: #000;
-            color: #fff;
-            padding: 20px 40px;
+            background: linear-gradient(90deg, #e7d3b3 0%, #c9b18a 100%);
+            color: #3e2c1c;
+            padding: 24px 40px 18px 40px;
             text-align: center;
             position: fixed;
             width: 100%;
             top: 0;
             left: 0;
             z-index: 1000;
-            transition: background-color 0.4s ease-in-out;
+            border-bottom: 4px double #b97a56;
+            box-shadow: 0 2px 10px rgba(120, 90, 40, 0.08);
+            font-family: 'Special Elite', cursive;
+            letter-spacing: 1.5px;
         }
 
         header h1 {
             margin: 0;
-            font-size: 2.5em;
-            font-weight: 600;
-            letter-spacing: 1px;
+            font-size: 2.8em;
+            font-weight: 400;
+            letter-spacing: 2px;
+            text-shadow: 1px 1px 0 #fffbe6, 2px 2px 0 #b97a56;
         }
 
         header nav a {
-            color: #fff;
+            color: #7c4a03;
             text-transform: uppercase;
             font-weight: 600;
-            margin: 0 20px;
-            font-size: 0.9em;
+            margin: 0 18px;
+            font-size: 1em;
+            font-family: 'Special Elite', cursive;
+            border-bottom: 2px dotted transparent;
+            padding-bottom: 2px;
         }
 
         header nav a:hover {
-            color: #0071e3;
+            color: #b97a56;
+            border-bottom: 2px dotted #b97a56;
         }
 
         /* Smooth Scrolling */
@@ -67,79 +75,90 @@
 
         /* Container Styles */
         .container {
-            max-width: 1200px;
-            margin: 100px auto;
-            padding: 40px;
-            background-color: #fff;
-            border-radius: 12px;
-            box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+            max-width: 900px;
+            margin: 120px auto 60px auto;
+            padding: 36px 32px;
+            background: #fffbe6;
+            border-radius: 14px;
+            border: 2px solid #c9b18a;
+            box-shadow: 0 0 40px rgba(120, 90, 40, 0.10);
             transition: box-shadow 0.4s ease-in-out;
+            font-family: 'EB Garamond', serif;
         }
 
         .container:hover {
-            box-shadow: 0 0 50px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 0 60px rgba(120, 90, 40, 0.18);
         }
 
         section {
-            margin-bottom: 60px;
+            margin-bottom: 54px;
             opacity: 0;
             transform: translateY(30px);
             animation: fadeInUp 1s ease forwards;
         }
 
         .section-title {
-            font-size: 3em;
-            margin-bottom: 30px;
-            color: #000;
-            border-bottom: 2px solid #0071e3;
-            padding-bottom: 10px;
+            font-size: 2.3em;
+            margin-bottom: 24px;
+            color: #7c4a03;
+            border-bottom: 2px dashed #b97a56;
+            padding-bottom: 8px;
             font-weight: 600;
+            font-family: 'Special Elite', cursive;
+            letter-spacing: 1px;
+            background: linear-gradient(90deg, #f5ecd7 60%, #e7d3b3 100%);
+            box-shadow: 0 1px 0 #fffbe6;
         }
 
         .content {
-            padding: 0 20px;
-            color: #666;
+            padding: 0 12px;
+            color: #4d3b23;
+            font-size: 1.13em;
         }
 
         .portfolio-item h3 {
-            font-size: 2em;
-            color: #0071e3;
-            margin-bottom: 15px;
+            font-size: 1.5em;
+            color: #b97a56;
+            margin-bottom: 12px;
+            font-family: 'Special Elite', cursive;
+            letter-spacing: 1px;
         }
 
         .portfolio-item p {
-            margin-top: 15px;
-            color: #444;
-            font-size: 1.1em;
+            margin-top: 12px;
+            color: #3e2c1c;
+            font-size: 1.07em;
         }
 
         /* Blog Section */
         .blog-entry h3 {
-            font-size: 2em;
-            color: #0071e3;
-            margin-bottom: 15px;
+            font-size: 1.4em;
+            color: #b97a56;
+            margin-bottom: 10px;
+            font-family: 'Special Elite', cursive;
         }
 
         .blog-entry p {
-            margin-bottom: 10px;
+            margin-bottom: 8px;
         }
 
         .blog-entry a {
-            font-size: 1.2em;
-            color: #0071e3;
-            text-decoration: none;
+            font-size: 1.1em;
+            color: #7c4a03;
+            text-decoration: underline;
             font-weight: bold;
             position: relative;
+            font-family: 'EB Garamond', serif;
         }
 
         .blog-entry a::after {
             content: '';
             position: absolute;
-            bottom: -5px;
+            bottom: -3px;
             left: 0;
             width: 0;
-            height: 2px;
-            background-color: #0071e3;
+            height: 1.5px;
+            background-color: #b97a56;
             transition: width 0.3s ease;
         }
 
@@ -149,24 +168,30 @@
 
         /* Contact Section */
         .contact-info {
-            font-size: 1.1em;
-            color: #444;
-            margin-bottom: 30px;
+            font-size: 1.08em;
+            color: #4d3b23;
+            margin-bottom: 24px;
+            font-family: 'EB Garamond', serif;
         }
 
         footer {
             text-align: center;
-            padding: 40px;
-            background-color: #f1f1f1;
-            color: #666;
-            font-size: 0.9em;
+            padding: 32px;
+            background: #e7d3b3;
+            color: #7c4a03;
+            font-size: 1em;
+            border-top: 2px double #b97a56;
+            font-family: 'Special Elite', cursive;
+            letter-spacing: 1px;
         }
 
         footer a {
-            color: #0071e3;
+            color: #7c4a03;
+            text-decoration: underline;
         }
 
         footer a:hover {
+            color: #b97a56;
             text-decoration: underline;
         }
 
@@ -181,6 +206,16 @@
                 opacity: 1;
                 transform: translateY(0);
             }
+        }
+
+        /* Vintage List Styles */
+        ul {
+            list-style-type: square;
+            padding-left: 22px;
+        }
+
+        li {
+            margin-bottom: 6px;
         }
     </style>
 </head>
